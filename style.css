@@ -1,0 +1,435 @@
+#lnxContainer {
+	position:relative;
+	/* height:100px; */
+	margin: auto;
+	padding-left: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+.posContainer {
+	height: 50%;
+	width: 120px;
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	align-items: center;
+	justify-content: space-between;
+	padding-right: 2.5px;
+	padding-left: 2.5px;
+}
+
+.shipsContainer {
+	display: grid;
+	    grid-template-columns: repeat(2, 1fr);
+	    grid-gap: 10px;
+			align-items: center;
+
+				/* justify-content: space-between;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;*/
+	 height:100%;
+	/* width:50%; */
+	/* gap:5px; */
+}
+
+#lnxOGC {
+	display: flex;
+	flex-wrap: wrap;
+	/* display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 10px; */
+	align-items: center;
+	height:100%;
+	margin-left:20px;
+	/* gap:5px; */
+	/* width:100%; */
+	/* margin-top:-2px; */
+	/* margin-left:20px; */
+	/* display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 10px; */
+				/* justify-content: space-between; */
+	/* width: 286px; */
+
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(37, 47, 58);
+  border-image: initial;
+  background: linear-gradient(0deg, rgb(26, 35, 45), transparent);
+}
+
+#lnxDiv {
+	display: grid;
+	    grid-template-columns: repeat(2, 1fr);
+			align-items: center;
+
+	/* height: auto; */
+	/* display: flex; */
+	/* align-items: center; */
+	/* justify-content: space-between; */
+}
+
+.spElem {
+	width:14px;
+	height: 14px !important;
+	vertical-align: middle;
+	/* margin:0px 0px 0px 5px; */
+
+}
+
+.gElem {
+	width: 25px;
+	height: 14px !important;
+	vertical-align: middle;
+	/* margin:0px 0px 0px 5px; */
+}
+
+.divider {
+    width:20px;
+    height:auto;
+    display:inline-block;
+}
+
+.posButton {
+	font-size: 100%;
+  position:relative;
+  width:40%;
+  height:30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 5.5s;
+  /* background-size: 200% auto; */
+  color: #9099a3;
+  border-radius: 4px;
+  border: 1px solid #252f3a;
+  cursor: pointer;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  box-shadow: rgba(255, 255, 255, 0.07) 0px 1px inset, rgba(255, 255, 255, 0.03) 0px 16px inset;
+  border-radius: 5px;
+  background: linear-gradient(to right, rgb(28, 43, 56) 45%, rgb(9, 14, 19));
+	margin-left:5px;
+}
+
+.cargoButton {
+  font-size: 100%;
+  position:relative;
+  width:100%;
+  height:30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 5.5s;
+  /* background-size: 200% auto; */
+  color: #9099a3;
+  border-radius: 4px;
+  border: 1px solid #252f3a;
+  cursor: pointer;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  box-shadow: rgba(255, 255, 255, 0.07) 0px 1px inset, rgba(255, 255, 255, 0.03) 0px 16px inset;
+  border-radius: 5px;
+  background: linear-gradient(to right, rgb(28, 43, 56) 45%, rgb(9, 14, 19));
+}
+
+.cargoButton:hover{
+  background: linear-gradient(to right, rgb(0, 102, 0), rgb(9, 14, 19)) !important;
+    background-position: right center;
+}
+
+#editPosButton {
+	width:32px;
+	height:32px;
+	position: absolute;
+  margin-right: 33px;
+	margin-left:auto;
+	left:0;
+	right:0;
+}
+
+.editPosButtonOFF {
+
+	background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAACzklEQVR4nO2aS2sUQRDHVwUfKEYzM5hIwIugH8LXZxD0A4h6MD6QGI2yPS14UAj5GgE/go+DCBo9GPAW9KR4UE++DrvVkrJqElaSnVcy09u9mfpDwbLM1tb/N93VTc+0WiKRSCQSDUbncEeo4VQUm7lQmYVQwbcoBuDgz8l3sZmNNJzga12XW5smbuKeSMFMGMN3Mo9lYhXO9BGNu13XX0lh++95MvKlrPH+gM+RNmdd+9iEcFukzH0ysLx58z0IyzQ9HrU0bnftqpyoUCr6cXXj60LB/FBAoEb2sHbz/+OBa3+5WpnzBQ0uhqdhu3sxaHeOHZrCvRyB7hwP4+4lan7PiqaDtz0h6fb5DW+JDJ4sykPXnKZrP+RMhU9erg681OWYfzEygwfL5tqvcZR+8zJnJEzb9LJx8SYne51fGtF4YKMpGQJ1/48Z0+irV5ul1WGbercCbc7YyJvsGH0RFTSXeqcUPKmam+728/RRYGbrqL0WUTFvUotsdy9Uzq3gcjpc86qO2mtR1vznpa5qbl4iM/uAL6IVoJs+T3Ff5dyUIwNAp47aa1FWoxqW/JUlAASAABAAAqBJAI5ew120Q7seKfOW1uM/WQXaDv7vZBeq4GpL486BmB/VOEHb0PeuTOfEYqDxsFXzfBDhqfkeBKsjgYbcDQ9MFgRMWgPAc969wfygnvDaGgBqfL9dGywMBT+tAXBurmQIAAEgADwHwCdICm7zxoWDlq47madKWxIAGe7PTRCaAiC8h+N9uTWONQbAuMZwfe6xuxg1BkAQw1RfbgW3GgMgeTmKDK8xr8A0CMDaQm3lFQACQAAIAK8B8EsO/N5QcwFYCgEgAASAHQ3FoWgMPywCMAvuDeaH1WNxfujg2mBhKLhiDQA/dqI/WXRuMtO8eWf9IenKGZ6HEMi89YejPSUjASZ5vrltjPCLX5hMhv2gHo+LRKIto38a9DglBVnmLwAAAABJRU5ErkJggg==');
+	background-size:cover;
+}
+
+.editPosButtonON {
+	background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC80lEQVR4nO2b22oUQRCGVwUPKIqZGUwk4I2gD+EBX0HQF/BwYTwgMRple1oQPBDyGoKvoN4oaPTCgJfqlRJFvfJ0sVstaatmYySZ6ZlJppvudeqHgiXs1tT/TXd17/Sm02Gx6uuE3hRLOJKkajYWai4W8CVJASjodfa3VM0kEg7Re32Xa03jl/W2RMB0nMJXNK/rxBKcqX1Sb/VdfyPF3d8n0chCXeP5gA+JVMd9+1iH9IZEqJtoYHH95pchLOL0uNuReqNvV/WEhWLRD5obXxUC7g8FBGxkd6yb/xe3fPsr1WDOVzS4FB7G3f7pqNs7sGdSb6eIZO9gnPbPYPN7VDUdgu0JWbcva3hCvaFlsCoPQjiK739bMhXeB7k60FJXYv7Jrmm9u26unVKP4OeeloyEKZde1i7a5JjWebzzazH/VwQBu/87wzT6HNRmaWnYFt6tSKhjLvJmO8ZQhAXNmhpe09yY43FxbjVjo3YrwmJeFBfZP9U4t4CzhbmFemajdisyzX9a6prmpiXS2AdCEa4A/eJ5qnc0zo05DAB6Nmq3IlOjGpb8jcUAGAADYAAMgAG0GgB8yhcIC/byBw4Avwvcy+3UhLptK3/wAPZf0FsyCAI+UmTmpd5sK3/wAFyLATAABtAuAFlTFXAxEeolfu//ZQLgOujadGqNjf28zaZeqhGpx/Gir32ZLon5SOq9Ts3TgUeg5gch1CunIwGH3CXvJishwDlnAGjOezdYEbjhe+4MADa+n74N1hgB350B8G6uZjAABsAAAgdAJ1UCrtLGhSJJ4Zrx9Oq/BICG87kRQlsAxDf0WC631KOtATAmdbw69+h1nbQGQJTCZC63gCutAZD9CBsNrzAvQLUIwMpCXeVlAAyAATCAoAHQjyljAYfbC8BRMAAGwADcaCgeiqbwzSEANeffYHk4fSyOdCd8G6wMlwcjdOyEF5n3btJo3vHRGGnwDC9ACGje+eHosrKRABM03/w2RvhB/5iRDfuCO/8HRZHrdxXs/XIAAAAASUVORK5CYII=');
+	background-size:cover;
+}
+
+.ogl-tooltip .ogk-fleet-detail .ogl-date {
+  color: inherit;
+}
+
+.ogl-tooltip .ogk-cargo {
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.ogl-tooltip .ogk-cargo > div {
+  margin: 2px;
+}
+
+.ogl-tooltip .ogl-detailRank {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.ogl-tooltip .ogk-trashsim {
+  margin-top: 10px;
+}
+
+.tooltip {
+  color: #8c9eaa !important;
+}
+
+.tooltip {
+  color: none;
+}
+
+.ogl-tooltip a[href] {
+  color: #6f9fc8;
+  text-decoration: none;
+}
+
+.ogl-sideStalk .ogl-stalkPlanets .close-tooltip {
+  padding: 0;
+}
+
+.ogl-tooltip .ogl-stalkPlanets {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.ogl-sideStalk .close-tooltip {
+  right: 0;
+  top: 0;
+}
+
+.ogl-hiddenTooltip {
+  display: none !important;
+  visibility: hidden !important;
+  z-index: -1 !important;
+}
+
+.ogl-tooltip {
+  background: #171d23;
+  border: 2px solid #364352;
+  border-radius: 7px;
+  box-shadow: 0 0 10px #000;
+  display: none;
+  font-size: 11px;
+  padding: 10px;
+  position: absolute;
+  transform: translateX(-50%) translateY(-100%);
+  max-width: 400px;
+  width: max-content;
+  z-index: 100000;
+}
+
+.ogl-tooltip div[style*="display:none;"] {
+  display: block !important;
+}
+
+.ogl-tooltip a[href]:hover {
+  color: orange;
+}
+
+.ogl-tooltip.ogl-active {
+  display: block;
+}
+
+.ogl-search-content .ogl-date,
+.ogl-tooltip .ogl-date,
+.ogl-sideStalk .ogl-date {
+  color: #61768e !important;
+  font-size: 10px;
+}
+
+.ogl-tooltip .ogl-pin {
+  position: absolute;
+  right: 26px;
+  top: 7px;
+}
+
+.ogl-tooltip .ogl-mmorpgstats {
+  position: absolute;
+  right: 45px;
+  top: 7px;
+}
+
+.ogl-tooltip .ogl-ranking {
+  position: relative !important;
+  right: auto !important;
+}
+
+.ogl-tooltip .icon_chat,
+.ogl-tooltip .icon_user,
+.ogl-tooltip .icon_against {
+  margin-right: 0px;
+}
+
+.ogl-tooltip .galaxyTooltip {
+  display: block !important;
+}
+
+.ogl-tooltip.ogl-autoHide .close-tooltip {
+  display: none;
+}
+
+.ogl-tooltip.ogl-tooltipLeft {
+  transform: translateX(-100%);
+}
+
+.ogl-tooltip.ogl-tooltipRight {
+  transform: none;
+}
+
+.ogl-tooltip.ogl-tooltipBottom {
+  transform: translateX(-50%);
+}
+
+.ogl-tooltip:not(.ogl-update):after {
+  background: #171d23;
+  border-bottom: 2px solid #364352;
+  border-right: 2px solid #364352;
+  bottom: -6px;
+  content: "";
+  display: block;
+  height: 15px;
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  transform: translateX(-50%) rotate(45deg);
+  width: 15px;
+  z-index: -1;
+}
+
+.ogl-tooltip.ogl-tooltipLeft:after {
+  border: none;
+  border-top: 2px solid #364352;
+  border-right: 2px solid #364352;
+  bottom: auto;
+  left: auto;
+  top: 8px;
+  transform: rotate(45deg);
+  right: -6px;
+}
+
+.ogl-tooltip.ogl-tooltipRight:after {
+  border: none;
+  border-bottom: 2px solid #364352;
+  border-left: 2px solid #364352;
+  bottom: auto;
+  left: -6px;
+  transform: rotate(45deg);
+  top: 8px;
+}
+
+.ogl-tooltip.ogl-tooltipBottom:after {
+  border: none;
+  border-top: 2px solid #364352;
+  border-left: 2px solid #364352;
+  bottom: auto;
+  left: 50%;
+  top: -8px;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.ogl-tooltip .ogl-text-btn_bluen {
+  float: right;
+}
+
+.ogl-dialog .close-tooltip {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.ogl-icon-attack,
+.close-tooltip,
+.icon_chat,
+.icon_close,
+.icon_fastforward,
+.icon_user,
+.icon_missile,
+.icon_eye,
+.icon_against,
+.icon_maximize,
+.icon_trash,
+.icon_plus,
+.ogl-pin,
+.ogl-mmorpgstats {
+  background: currentColor !important;
+  color: #485f93 !important;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
+  height: 16px;
+  overflow: hidden;
+  position: relative;
+  width: 16px;
+}
+
+.ogl-icon-attack.ogl-active,
+.close-tooltip.ogl-active,
+.icon_chat.ogl-active,
+.icon_plus.ogl-active,
+.icon_close.ogl-active,
+.icon_fastforward.ogl-active,
+.icon_user.ogl-active,
+.icon_missile.ogl-active,
+.icon_eye.ogl-active,
+.icon_against.ogl-active,
+.icon_maximize.ogl-active,
+.icon_trash.ogl-active,
+.ogl-pin.ogl-active,
+.ogl-tableOptions .icon.ogl-active,
+.ogl-mmorpgstats.ogl-active {
+  color: #813383 !important;
+}
+
+.ogl-icon-attack:hover,
+.close-tooltip:hover,
+.icon_chat:hover .icon_plus:hover,
+.icon_close:hover,
+.icon_fastforward:hover,
+.icon_user:hover,
+.icon_missile:hover,
+.icon_eye:hover,
+.icon_against:hover,
+.icon_maximize:hover,
+.icon_trash:hover,
+.ogl-pin:hover,
+.ogl-tableOptions .icon:hover,
+.ogl-mmorpgstats:hover {
+  color: #c75817 !important;
+}
+
+.icon_close:before,
+.close-tooltip:before {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 9px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 2px;
+}
+
+.icon_close:after,
+.close-tooltip:after {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 9px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 2px;
+}

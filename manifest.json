@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+
+  "name": "SmartXped",
+  "description": "blah blah tool",
+  "version": "1.0",
+  "background": { "service_worker": "background.js"},
+
+  "content_scripts": [
+    {
+      "exclude_matches": ["https://*.ogame.gameforge.com/game/admin2/*"],
+      "matches": ["https://*.ogame.gameforge.com/game/*"],
+      "css": ["style.css"],
+      "js": ["main.js", "jquery.min.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [{"resources" :["LNXP.js"], "matches" : ["<all_urls>"]}],
+
+  "action": {
+    "default_title": "SmartXped",
+    "default_icon": "icon.png",
+    "default_popup": "exp.html"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "activeTab"
+  ]
+}
